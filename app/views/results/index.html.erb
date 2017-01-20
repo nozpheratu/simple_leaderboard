@@ -19,8 +19,6 @@
           <td><%= result.name %></td>
           <td><%= result.score %></td>
           <td><%= result.email %></td>
-          <td><%= link_to 'Show', result %></td>
-          <td><%= link_to 'Edit', edit_result_path(result) %></td>
           <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>

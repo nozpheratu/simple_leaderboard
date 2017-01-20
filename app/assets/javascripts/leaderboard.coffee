@@ -15,17 +15,16 @@ $(document).on 'turbolinks:load', ->
   ), 3000
 
 renderResults = (results) ->
-  results = results = results.sort (a, b) ->
-    a.score - b.score
-  $table = $('#results tbody')
-  $('#results tbody tr').remove()
-  for i of results
-    `i = i`
-    iN = parseInt(i) + 1
-    css_class = ''
-    if i % 1 == 0
-      css_class = 'even'
-    if i % 2 == 0
-      css_class = 'odd'
-    $table.append '<tr class="' + css_class + '">' + '<td>#' + iN + '</td>' + '<td>' + results[i].attributes.name + '</td>' + '<td>' + results[i].attributes.score + '</td>' + '</tr>'
-  return
+  if results.length > 0
+    $table = $('#results tbody')
+    $('#results tbody tr').remove()
+    for i of results
+      `i = i`
+      iN = parseInt(i) + 1
+      css_class = ''
+      if i % 1 == 0
+        css_class = 'even'
+      if i % 2 == 0
+        css_class = 'odd'
+      $table.append '<tr class="' + css_class + '">' + '<td>#' + iN + '</td>' + '<td>' + results[i].attributes.name + '</td>' + '<td>' + results[i].attributes.score + '</td>' + '</tr>'
+return
