@@ -13,7 +13,7 @@
         Name
       </th>
       <th>
-        Score
+        Score (seconds)
       </th>
     </tr>
   </thead>
@@ -23,7 +23,7 @@
         <tr class="<%= cycle('odd', 'even') -%>">
           <td>#<%= count + 1%></td>
           <td><%= result.name %></td>
-          <td><%= result.score %></td>
+          <td><%= fscore(result.score) %></td>
         </tr>
       <% end %>
     <% else %>

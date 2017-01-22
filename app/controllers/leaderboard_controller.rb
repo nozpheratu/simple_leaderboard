@@ -1,5 +1,5 @@
 class LeaderboardController < ApplicationController
   def index
-    @results = Result.all.order('score desc')
+    @results = Result.all.order('score asc')
   end
 end
